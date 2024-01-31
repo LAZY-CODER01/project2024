@@ -1,0 +1,207 @@
+html{
+    font-size: 16px;
+}
+body{
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+    overflow: hidden;
+    
+            /* align-items: center; */
+            
+            height: 100vh;
+            /* margin: 0px; */
+            top: 0%;
+}
+#heading{
+    font-size: 4rem;
+      text-align: center;
+      position: relative;
+      margin: 10px auto;
+      color: white;
+      
+}
+
+
+#sentence{
+  left: 15%;
+    /* display: inline-block; */
+    display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    position: relative;
+    height: 80vh;
+    width:70vw;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(162,102,246,1) 0%, rgba(203,159,249,1) 90% );
+    z-index: 0;
+}
+#words{
+    font-size: 2rem;
+    color: #2A2A2A;
+    padding: 3rem;
+    width: 60vw;
+    display: block;
+    margin: 10px;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+
+
+}
+#time{
+    font-size: 1.5rem;
+    display: inline;
+    margin: 1rem;
+    color: #16123f;
+}
+#stopwatch{
+    display: inline;
+}
+#input{
+  position: absolute;
+  top: 20%;
+  left: 5%;
+    width: 60vw;
+    display: block;
+    margin: 10px auto;
+    padding: 25px;
+    height: 30vh;
+    font-size: 2rem;
+    resize: none;
+    border-radius: 50px;
+    box-shadow: inset 5px 5px 25px #d9d9d9,
+            inset -5px -5px 25px #ffffff;
+   pointer-events: none;
+   opacity: 0;
+}
+.correct{
+  color: green;
+  /* background-color: white; */
+}
+.wrong{
+  color: red;
+  /* background-color: white; */
+}
+
+#go{
+    /* height: 3rem; */
+    width: 8rem;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 1.5rem;
+    display:block;
+    margin:auto ;
+    position:relative;
+    margin: -30vh auto;
+
+    z-index: 1;
+    
+    animation: go 0.5s linear 1;
+}
+
+@keyframes go {
+    0%{
+        transform: translateY(300%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+    
+}
+
+#go {
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: black;
+    
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    /* font-size: 16px; */
+  
+    border: 0;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  #go:hover,
+  #go:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+  }
+  
+  #go:active {
+    background: var(--color);
+    color: #fff;
+  }
+.btn{
+    display: none;
+}
+#stop{
+    display: none;
+}
+
+
+
+.btn {
+  background-color: #47a901;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display:block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: absolute;
+  text-align: center;
+  margin: 30px auto;
+  left: 40%;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.btn:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 16px 48px;
+  }
+}
+
+#stop{
+    background-color: #d00000;
+}

@@ -1,0 +1,125 @@
+
+body{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 90%);
+    overflow-x: hidden;
+}
+#first{
+    height: 90vh;
+    width: 90vw;
+    position: absolute;
+    /* overflow-y: hidden; */
+}
+.nav{
+    height: 7vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    /* position: absolute; */
+    top: 10%;
+    background-color: rgb(0, 0, 0);
+}
+
+
+.navna{
+    color: rgb(251, 139, 212);
+    align-self: center;
+    justify-self: center;
+    font-size: 40px;
+    
+    width: 40vw;
+    /* position: relative; */
+}
+
+.navcon{
+    align-self: center;
+    justify-self: center;
+    color: white;
+    animation: fall 0.5s ease-in 1;
+}
+@keyframes fall{
+    from{
+        transform: translateY(-100%);
+    }
+    to{transform: translateY(0%);}
+    
+}
+b{
+    color: red;
+}
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Sofia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Kanit:ital,wght@0,500;1,900&display=swap");
+#content{
+    position:absolute;
+      top: 30%;
+      
+        font-family: "Sofia", cursive;
+    font-size: 30px;
+    width: 50vw;
+    height: 50vh;
+    color: rgb(0, 0, 0);
+    left: 3%;
+    padding: 3px;
+    z-index: 1;
+    opacity: 0;
+    overflow: hidden;
+      animation: open 1s linear 1;
+      transform: translateY(100%);
+      animation: reveal 1.5s ease-out forwards;
+}
+
+    @keyframes reveal {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }  
+}
+
+a{
+    position:relative;
+    margin: 20px auto;
+    
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#download{
+    font-size: 25px;
+    height: 30px;
+    width: 160px;
+    background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    align-self: center;
+    justify-self: center;
+    margin: 20px auto;
+    top: 50%;
+}
+#selfphoto{
+    position:absolute;
+    top: 20%;
+    height: 500px;
+    width: 400px;
+   z-index: 1;
+    position: absolute;
+    left: 65%;
+    display: inline-block; 
+    filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
+}
+#circle{
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    
+    height: 700px;
+    width: 700px;
+    left: 70%;
+    position: absolute;
+    z-index: 0;
+    top: 20%;
+    border-radius: 50%;
+    animation: zoom 2s linear 1;
+}
